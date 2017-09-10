@@ -4,13 +4,15 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 
 ## TODO
 - [ ] Build Homepage and Blog (MVP)
+  - [ ] Create Nav and Blog Archive page
+  - [ ] Pull data from current Wordpress
 - [ ] Add projects page
-- [ ] Pull data from current Wordpress
 - [ ] Use a CI Tool (Github, Travis...) 
 - [ ] Use either GitHub Pages or Heroku to host site
 
 ## Build 🔧
-TBA
+- To run dev server: ```gatsby develop```
+  - Hot reloading dev environment available from ```localhost:8000```
 
 ## Deploy :zap:
 TBA
