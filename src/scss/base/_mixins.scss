@@ -1,0 +1,18 @@
+//
+// Sass Mixins
+//
+
+// Convert font values to rem
+@function ems($value){
+	// converts a pixel amount to rems or ems based on the body font size
+	$value: $value / $bodyfont-size + rem;
+	//$value: $value / $bodysize + em;
+	@return $value;
+}
+
+// Max width media-query mixin
+@mixin media-query-max($breakpoint) {
+	@media screen and (max-width: #{$breakpoint}) {
+		@content;
+	}
+}

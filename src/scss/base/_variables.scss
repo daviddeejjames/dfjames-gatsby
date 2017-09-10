@@ -1,0 +1,34 @@
+//
+// Sass Variables
+//
+
+// Colours
+$white: #fff;
+$primary-red: #e4002b;
+$add-button-green: #4caf50;
+$remove-button-red: $primary-red;
+$listing-border-color: #e1e4e6;
+$error-bg-color: rgba(189, 194, 197, 0.8);
+
+// Fonts
+$montserrat: 'Montserrat', sans-serif;
+
+$bodyfont: $montserrat;
+$bodyfont-size: 16px;
+$bodyfont-weight: normal;
+
+$headingfont: $montserrat;
+$heading-weight: 600;
+$main-heading-color: $white;
+$heading-color: #111;
+
+
+// Layout
+$main-container-width: 1200px;
+$header-height: 60px;
+$mobile-header-height: 50px;
+
+// Breakpoints
+$tablet-breakpoint: 1199px;
+$mobile-breakpoint: 767px;
+$small-mobile-breakpoint: 540px;

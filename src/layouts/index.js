@@ -3,34 +3,40 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.scss'
+import '../scss/styles.scss'
+
+const ListLink = props =>
+  <li>
+    <Link to={props.to}>
+      {props.children}
+    </Link>
+  </li>
+
+
+const Navigation = () => (
+  <nav className="Navigation">
+    <ul className="nav-list">
+      <ListLink to="/">Home</ListLink>
+      <ListLink to="/projects/">Projects</ListLink>
+      <ListLink to="/blog/">Blog</ListLink>
+    </ul>
+  </nav>
+)
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          David James
-        </Link>
-      </h1>
-    </div>
+  <div className="Header">
+    <h1 className="logo-wrap">
+      <Link
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none',
+        }}
+      >
+        David James
+      </Link>
+    </h1>
+    <Navigation />
   </div>
 )
 
@@ -44,14 +50,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="content-container">
       {children()}
     </div>
   </div>

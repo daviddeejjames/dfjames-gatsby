@@ -1,0 +1,59 @@
+//
+// Placeholders
+//
+%clearfix{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%column{
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  //Make singular column on mobile devices
+  @include media-query-max($small-mobile-breakpoint){
+    width: 100%;
+  }
+}
+
+// Remove some default browser styling of HTML buttons
+// and create a base button style
+%button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-style: solid;
+  border-image: none;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  font-size: ems(15px);
+  font-weight: 600;
+
+  &:hover,
+  &:focus{
+    outline: none;
+  }
+}
+
+// Slide down animation for header
+@keyframes slideDown{
+  0%{
+    transform: translate(0, -#{$header-height + 55px});
+  }
+
+  100%{
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,91 @@
+//
+// General styling for the page
+//
+body{
+//   background-image: url('../images/background.png');
+//   background-attachment: fixed;
+//   font-family: $montserrat;
+  font-size: ems($bodyfont-size);
+  font-weight: normal;
+  font-style: normal;
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong{
+    font-weight: $heading-weight;
+    font-style: normal;
+    color: $heading-color;
+  }
+
+  // Responsive Images
+  img{
+      max-width: 100%;
+      height: auto;
+  }
+}
+
+.Header{
+  animation: slideDown 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100px;
+
+  .logo-wrap{
+    margin: 0;
+    line-height: 38px;
+    font-size: ems(38px);
+
+    a{
+      display: inline-block;
+    }
+  }
+
+  .Navigation{
+    display: inline-block;
+
+    .nav-list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li{
+        display: inline-block;
+        margin: 0;
+        margin-right: 30px;
+
+        a{
+          display: inline-block;
+          line-height: 18px;
+          font-size: ems(18px);
+          text-decoration: none;
+          color: $white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+// Main Content Wrap
+.content-container{
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
