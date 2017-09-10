@@ -7,7 +7,7 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
   - [ ] Create Nav and Blog Archive page
   - [ ] Pull data from current Wordpress
 - [ ] Add projects page
-- [ ] Use a CI Tool (Github, Travis...) 
+- [ ] Use a CI Tool (Github, Travis...)
 - [ ] Use either GitHub Pages or Heroku to host site
 
 ## Build 🔧
