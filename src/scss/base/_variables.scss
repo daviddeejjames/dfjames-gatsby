@@ -4,6 +4,7 @@
 
 // Colours
 $white: #fff;
+$off-black: #111;
 $primary-red: #e4002b;
 $add-button-green: #4caf50;
 $remove-button-red: $primary-red;
@@ -11,16 +12,12 @@ $listing-border-color: #e1e4e6;
 $error-bg-color: rgba(189, 194, 197, 0.8);
 
 // Fonts
-$montserrat: 'Montserrat', sans-serif;
-
-$bodyfont: $montserrat;
 $bodyfont-size: 16px;
 $bodyfont-weight: normal;
 
-$headingfont: $montserrat;
-$heading-weight: 600;
 $main-heading-color: $white;
-$heading-color: #111;
+$heading-color: $off-black;
+$header-bg-color: $off-black;
 
 
 // Layout

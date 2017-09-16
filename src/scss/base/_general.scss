@@ -2,9 +2,6 @@
 // General styling for the page
 //
 body{
-//   background-image: url('../images/background.png');
-//   background-attachment: fixed;
-//   font-family: $montserrat;
   font-size: ems($bodyfont-size);
   font-weight: normal;
   font-style: normal;
@@ -17,7 +14,6 @@ body{
   h5,
   h6,
   strong{
-    font-weight: $heading-weight;
     font-style: normal;
     color: $heading-color;
   }
@@ -34,7 +30,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: $header-bg-color;
   margin-bottom: 2rem;
   box-sizing: border-box;
   padding-left: 40px;
