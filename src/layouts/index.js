@@ -5,13 +5,11 @@ import Helmet from 'react-helmet'
 
 import '../scss/styles.scss'
 
-const ListLink = props =>
+const ListLink = props => (
   <li>
-    <Link to={props.to}>
-      {props.children}
-    </Link>
+    <Link to={props.to}>{props.children}</Link>
   </li>
-
+)
 
 const Navigation = () => (
   <nav className="Navigation">
@@ -45,14 +43,19 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="David James - Front End Developer"
       meta={[
-        { name: 'description', content: 'David James - Front End Web Developer - Melbourne' },
-        { name: 'keywords', content: 'David James, Mlebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass'},
+        {
+          name: 'description',
+          content: 'David James - Front End Web Developer - Melbourne',
+        },
+        {
+          name: 'keywords',
+          content:
+            'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
+        },
       ]}
     />
     <Header />
-    <div className="content-container">
-      {children()}
-    </div>
+    <div className="content-container">{children()}</div>
   </div>
 )
 
