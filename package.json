@@ -10,6 +10,7 @@
     "gatsby-plugin-sass": "^1.0.12",
     "gatsby-plugin-typography": "^1.7.9",
     "gatsby-source-filesystem": "^1.4.12",
+    "gatsby-source-wordpress": "^1.7.10",
     "gatsby-transformer-remark": "^1.7.7",
     "typography-theme-fairy-gates": "^0.15.11"
   },
