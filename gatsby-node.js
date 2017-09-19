@@ -1,3 +1,6 @@
+//
+// Programatically recreates our Wordpress pages and posts!
+//
 const _ = require(`lodash`)
 const Promise = require(`bluebird`)
 const path = require(`path`)
@@ -19,22 +22,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
     // ==== PAGES (WORDPRESS NATIVE) ====
     graphql(
-      `
-      {
-
-          allWordpressPage {
-            edges {
-              node {
-                id
-                slug
-                status
-                template
-              }
+      `{
+        allWordpressPage {
+          edges {
+            node {
+              id
+              slug
+              status
+              template
             }
           }
-
-      }
-    `
+        }
+      }`
     )
       .then(result => {
         if (result.errors) {
@@ -70,20 +69,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       .then(() => {
         graphql(
           `{
-                  allWordpressPost {
-                    edges {
-                      node {
-                        id
-                        slug
-                        status
-                        template
-                        format
-                      }
-                    }
+              allWordpressPost {
+                edges {
+                  node {
+                    id
+                    slug
+                    status
+                    template
+                    format
                   }
-
                 }
-              `
+              }
+            }`
         ).then(result => {
           if (result.errors) {
             console.log(result.errors)
@@ -106,6 +103,5 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
       })
     // ==== END POSTS ====
-
   })
 }
