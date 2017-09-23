@@ -7,9 +7,11 @@ const Blog = ({ data }) => (
     <div className="blog-post-list">
       {data.allWordpressPost.edges.map(({ node }) => (
         <div className="post">
-          <h3 className="post-title">{node.title}</h3>
-          <div className="date">{node.date}</div>
-          <div className="excerpt">{node.excerpt}</div>
+          <Link to={`blog/${node.slug}`}>
+            <h3 className="post-title">{node.title}</h3>
+            <div className="date">{node.date}</div>
+          </Link>
+          <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
     </div>
