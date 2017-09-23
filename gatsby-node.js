@@ -87,9 +87,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             reject(result.errors)
           }
           const postTemplate = path.resolve('./src/templates/post.js')
-        // We want to create a detailed page for each
-        // post node. We'll just use the WordPress Slug for the slug.
-        // The Post ID is prefixed with 'POST_'
+          // We want to create a detailed page for each
+          // post node. We'll just use the WordPress Slug for the slug.
+          // The Post ID is prefixed with 'POST_'
           _.each(result.data.allWordpressPost.edges, edge => {
             createPage({
               path: `/blog/${edge.node.slug}/`,

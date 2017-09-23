@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-const PostTemplate = ({data}) => {
+const PostTemplate = ({ data }) => {
 
   const post = data.wordpressPost
 

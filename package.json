@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "dfjames-gatsby",
+  "description": "My portfolio site using GatsbyJS pulling data from Wordpress REST API",
+  "version": "0.0.1",
+  "author": "David James <davidj28827@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
@@ -15,7 +15,8 @@
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "wordpress"
   ],
   "license": "MIT",
   "main": "n/a",

@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-const PageTemplate = ({data}) => {
+const PageTemplate = ({ data }) => {
 
   const page = data.wordpressPage
 
