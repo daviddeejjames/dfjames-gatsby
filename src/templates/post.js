@@ -1,25 +1,34 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-export default function Template({ data }) {
-  const { markdownRemark: post } = data
-  // const post = data.markdownRemark;
+const PostTemplate = ({data}) => {
+
+  const post = data.wordpressPost
+
   return (
     <div>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1>{post.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
   )
 }
 
-export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
+export default PostTemplate
+
+export const pageQuery = graphql`
+  query currentPostQuery($id: String!) {
+    wordpressPost(id: { eq: $id }) {
+      title
+      content
+      excerpt
+    }
+    site {
+      id
+      siteMetadata {
         title
+        subtitle
       }
     }
   }
 `
+

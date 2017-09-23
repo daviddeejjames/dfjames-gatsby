@@ -11,7 +11,7 @@ const slash = require(`slash`)
 // access to any information necessary to programatically
 // create pages.
 // Will create pages for WordPress pages (route : /{slug})
-// Will create pages for WordPress posts (route : /post/{slug})
+// Will create pages for WordPress posts (route : /blog/{slug})
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
@@ -92,7 +92,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         // The Post ID is prefixed with 'POST_'
           _.each(result.data.allWordpressPost.edges, edge => {
             createPage({
-              path: `/post/${edge.node.slug}/`,
+              path: `/blog/${edge.node.slug}/`,
               component: slash(postTemplate),
               context: {
                 id: edge.node.id,

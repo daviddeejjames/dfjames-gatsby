@@ -5,32 +5,30 @@ const Blog = ({ data }) => (
   <div>
     <h1>Blog</h1>
     <div className="blog-post-list">
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allWordpressPost.edges.map(({ node }) => (
         <div className="post">
-          <h3 className="post-title">{node.frontmatter.title}</h3>
-          <div className="date">{node.frontmatter.date}</div>
+          <h3 className="post-title">{node.title}</h3>
+          <div className="date">{node.date}</div>
           <div className="excerpt">{node.excerpt}</div>
         </div>
       ))}
     </div>
-    {console.log(data)}
   </div>
 )
 
-export const query = graphql`
-  query MyBlogPosts {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+export default Blog
+
+export const pageQuery = graphql`
+  query getPostQuery {
+    allWordpressPost(sort: { fields: [date] }) {
       edges {
         node {
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
+          title
           excerpt
+          slug
+          date
         }
       }
     }
   }
 `
-
-export default Blog

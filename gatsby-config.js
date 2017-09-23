@@ -12,13 +12,6 @@ module.exports = {
         protocol: 'http',
         hostingWPCOM: false,
         useACF: false,
-        auth: {
-          // If auth.user and auth.pass are filled, then the source plugin will be allowed
-          // to access endpoints that are protected with .htaccess.
-          htaccess_user: 'your-htaccess-username',
-          htaccess_pass: 'your-htaccess-password',
-          htaccess_sendImmediately: false,
-        },
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems
         verboseOutput: false,
@@ -27,8 +20,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-    resolve: `gatsby-plugin-typography`,
-    options: {
+      resolve: `gatsby-plugin-typography`,
+      options: {
         pathToConfigModule: `src/utils/typography.js`,
       }
     },
