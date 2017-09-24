@@ -47,6 +47,12 @@
   }
 }
 
+%bg-image{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 // Slide down animation for header
 @keyframes slideDown{
   0%{

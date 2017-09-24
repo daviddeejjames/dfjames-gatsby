@@ -11,7 +11,7 @@ module.exports = {
         baseUrl: 'dfjames.com',
         protocol: 'http',
         hostingWPCOM: false,
-        useACF: false,
+        useACF: true,
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems
         verboseOutput: false,

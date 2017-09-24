@@ -9,4 +9,8 @@
 @import 'base/placeholders';
 @import 'base/general';
 
-// Component Sass Files
+// Template Sass Files
+@import 'templates/post-and-page';
+
+// Pages
+@import 'pages/index';

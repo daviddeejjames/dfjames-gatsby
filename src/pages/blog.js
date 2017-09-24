@@ -7,7 +7,7 @@ const Blog = ({ data }) => (
     <div className="blog-post-list">
       {data.allWordpressPost.edges.map(({ node }) => (
         <div className="post">
-          <Link to={`blog/${node.slug}`}>
+          <Link key={node.id} to={`blog/${node.slug}`}>
             <h3 className="post-title">{node.title}</h3>
             <div className="date">{node.date}</div>
           </Link>
@@ -25,6 +25,7 @@ export const pageQuery = graphql`
     allWordpressPost(sort: { fields: [date] }) {
       edges {
         node {
+          id
           title
           excerpt
           slug
