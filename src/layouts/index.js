@@ -38,6 +38,12 @@ const Header = () => (
   </div>
 )
 
+const Footer = () => (
+  <div className="Footer">
+  
+  </div>
+)
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -56,6 +62,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     <div className="content-container">{children()}</div>
+    <Footer />
   </div>
 )
 

@@ -6,9 +6,9 @@ const PostTemplate = ({ data }) => {
   const post = data.wordpressPost
 
   return (
-    <div>
+    <div className="single-post">
       <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
   )
 }
