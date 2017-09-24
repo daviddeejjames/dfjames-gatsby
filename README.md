@@ -6,7 +6,7 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 - [ ] Build Homepage and Blog (MVP)
   - [x] Create Nav and Blog Archive page
   - [x] Pull data from current Wordpress
-  - [ ] Pull homepage content from Wordpress
+  - [x] Pull homepage content from Wordpress
   - [ ] Pull social icon URL's from Wordpress Options Page
   - [ ] Style and fill with actual content
 - [ ] Add projects page
