@@ -7,46 +7,6 @@
   clear: both;
 }
 
-%column{
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-
-  //Make singular column on mobile devices
-  @include media-query-max($small-mobile-breakpoint){
-    width: 100%;
-  }
-}
-
-// Remove some default browser styling of HTML buttons
-// and create a base button style
-%button{
-  display: block;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-  border-style: solid;
-  border-image: none;
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background-color: transparent;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-  font-size: ems(15px);
-  font-weight: 600;
-
-  &:hover,
-  &:focus{
-    outline: none;
-  }
-}
-
 %bg-image{
   background-repeat: no-repeat;
   background-position: center;
@@ -68,5 +28,29 @@
 
   100%{
     transform: translate(0, 0);
+  }
+}
+
+@keyframes portraitSlideLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bioSlideRight{
+  0%{
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }

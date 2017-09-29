@@ -25,7 +25,7 @@ const Header = () => (
   <div className="Header">
     <Link className="logo-link" to="/">
       <div className="diamond"></div>
-      <h1>David James</h1>
+      <div className="name">David James</div>
     </Link>
     <Navigation />
   </div>

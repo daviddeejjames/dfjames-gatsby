@@ -30,15 +30,19 @@ body{
 }
 
 .Header{
-  animation: slideDown 0.5s;
+  @include media_query($tablet-breakpoint){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  animation: slideDown 0.7s 0.5s;
+  animation-fill-mode: both;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $header-bg-color;
-  margin-bottom: 2rem;
   box-sizing: border-box;
-  padding-left: 40px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 60px;
   position: fixed;
   top: 0;
@@ -52,20 +56,38 @@ body{
 
     .diamond{
       transition: transform 0.4s;
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       background-color: $primary-accent;
       transform: rotate(45deg);
       transform-origin: 50% 50%;
     }
 
-    h1{
-      transition: transform 0.4s opacity 0.4s;
-      opacity: 1;
-      transform: translateX(0);
-      font-weight: 500;
-      color: $white;
+    .name{
+      transition: transform 0.4s, opacity 0.4s;
+      transform: translateX(-30px);
+      opacity: 0;
+      margin-left: 18px;
+      margin-bottom: 0;
       font-size: ems(14px);
+      line-height: 14px;
+      margin-top: 7px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    &:hover{
+
+      .diamond{
+        transform: rotate(135deg);
+      }
+
+      .name{
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 

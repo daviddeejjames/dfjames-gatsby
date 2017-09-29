@@ -11,7 +11,7 @@
 }
 
 // Max width media-query mixin
-@mixin media-query-max($breakpoint) {
+@mixin media_query($breakpoint) {
 	@media screen and (max-width: #{$breakpoint}) {
 		@content;
 	}

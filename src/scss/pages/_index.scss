@@ -4,7 +4,7 @@
 .front-page{
   display: flex;
   width: 100%;
-  height: calc(100vh - 200px);
+  height: 100vh;
   justify-content: center;
   align-items: center;
 
@@ -17,6 +17,8 @@
 
     // Profile image diamond
     .image-wrap{
+      animation: portraitSlideLeft 0.8s 0.2s;
+      animation-fill-mode: both;
       margin-right: 40px;
       padding: 20px;
 
@@ -38,6 +40,8 @@
 
     // Text
     .content{
+      animation: bioSlideRight 0.7s 0.3s;
+      animation-fill-mode: both;
       max-width: 440px;
 
       // David James
