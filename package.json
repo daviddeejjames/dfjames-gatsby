@@ -6,12 +6,14 @@
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
+    "gatsby-plugin-google-analytics": "^1.0.7",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.12",
     "gatsby-plugin-typography": "^1.7.9",
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-source-wordpress": "^1.7.10",
     "gatsby-transformer-remark": "^1.7.7",
+    "react-icons": "^2.2.5",
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "keywords": [
@@ -27,6 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-postcss-sass": "^1.0.12",
     "prettier": "^1.6.1"
   }
 }
