@@ -7,20 +7,17 @@ import Link from 'gatsby-link'
 const IndexPage = ({ data }) => {
   const homepage = data.wordpressPage
   const acfData = JSON.parse(data.wordpressPage.childWordpressAcfField.internal.content)
-  const folioItems = acfData.folio_items
+  const profileImage = acfData.profile_image
 
   return (
     <div className="front-page">
-      <div className="page-content" dangerouslySetInnerHTML={{ __html: homepage.content }} />
-      <div className="folio-items-wrap">
-        {folioItems.map(item => (
-          <div className="folio-item">
-            <a href={item.url} target="_blank">
-              <div className="item-image" style={{backgroundImage: `url(${item.image.url})`}}> </div>
-              <div className="item-title">{item.title}</div>
-            </a>
+      <div className="card-wrap">
+        <div className="image-wrap">
+          <div className="mask">
+            <div className="profile-image" style={{ backgroundImage: `url(${profileImage.url})` }}> </div>
           </div>
-        ))}
+        </div>
+        <div className="content" dangerouslySetInnerHTML={{ __html: homepage.content }} />
       </div>
     </div>
   )

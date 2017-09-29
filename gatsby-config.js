@@ -8,7 +8,7 @@ module.exports = {
       // Pull wordpress content from API
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'dfjames.com',
+        baseUrl: 'wordpress.dfjames.com',
         protocol: 'http',
         hostingWPCOM: false,
         useACF: true,

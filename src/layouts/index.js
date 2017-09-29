@@ -23,24 +23,17 @@ const Navigation = () => (
 
 const Header = () => (
   <div className="Header">
-    <h1 className="logo-wrap">
-      <Link
-        to="/"
-        style={{
-          color: 'white',
-          textDecoration: 'none',
-        }}
-      >
-        David James
-      </Link>
-    </h1>
+    <Link className="logo-link" to="/">
+      <div className="diamond"></div>
+      <h1>David James</h1>
+    </Link>
     <Navigation />
   </div>
 )
 
 const Footer = () => (
   <div className="Footer">
-  
+
   </div>
 )
 
@@ -56,7 +49,7 @@ const TemplateWrapper = ({ children }) => (
         {
           name: 'keywords',
           content:
-            'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
+          'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
         },
       ]}
     />
