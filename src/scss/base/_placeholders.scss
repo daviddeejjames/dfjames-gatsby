@@ -43,12 +43,18 @@
     }
 
     a{
+      @include media_query($tablet-breakpoint){
+        transition: none;
+      }
       transition: color 0.4s, transform 0.4s;
       display: inline-block;
       font-size: ems(24px);
       line-height: 24px;
 
       &:hover{
+        @include media_query($tablet-breakpoint){
+          transform: scale(1);
+        }
         color: $primary-accent;
         transform: scale(1.2);
       }
