@@ -1,0 +1,27 @@
+.blog{
+
+  .blog-post-list{
+
+    .post{
+      @extend %card;
+      animation: slideUp 0.8s 0.2s;
+      animation-fill-mode: both;
+      margin-bottom: 30px;
+      padding: 30px 40px;
+
+      .excerpt{
+
+        p:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Cascade the animation-delay for the blog posts
+    @for $i from 1 through 10{
+      .post:nth-child(#{$i}){
+        animation-delay: $i * 0.3s + 0.2s;
+      }
+    }
+  }
+}

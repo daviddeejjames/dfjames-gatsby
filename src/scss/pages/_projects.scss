@@ -2,21 +2,68 @@
 // Projects page styling
 //
 .projects-page{
+  .page-content{
+    @extend %card;
+    animation: slideUp 0.8s 0.5s;
+    animation-fill-mode: both;
+    margin-bottom: 40px;
+
+    p:last-of-type{
+      margin-bottom: 0;
+    }
+  }
 
   .folio-items-wrap{
+    animation: slideUp 0.8s 0.8s;
+    animation-fill-mode: both;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     .folio-item{
+      border: 1px solid #{darken($card-border-color, 10)};
+      border-radius: 5px;
+      box-shadow: 0px 15px 30px -17px rgba(0,0,0,0.42);
       flex-basis: 30%;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
 
       .item-image{
         @extend %bg-image;
         width: 100%;
         height: 200px;
-        border-radius: 5px;
+      }
+
+      .item-title-wrap{
+        transition: opacity 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($off-black, 0.85);
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        .item-title{
+          color: $primary-accent;
+          font-size: ems(22px);
+          line-height: 30px;
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+      }
+
+      &:hover{
+        .item-title-wrap{
+          opacity: 1;
+        }
       }
     }
   }

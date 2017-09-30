@@ -7,15 +7,17 @@ const Projects = ({ data }) => {
   const folioItems = acfData.folio_items
 
   return (
-    <div className="projects-page">
+    <div className="projects-page page-wrap">
       <h1 className="page-title">{projectsPage.title}</h1>
       <div className="page-content" dangerouslySetInnerHTML={{ __html: projectsPage.content }} />
       <div className="folio-items-wrap">
         {folioItems.map(item => (
-          <div className="folio-item">
+          <div key={item.image.id} className="folio-item">
             <a href={item.url} target="_blank">
               <div className="item-image" style={{ backgroundImage: `url(${item.image.url})` }}> </div>
-              <div className="item-title">{item.title}</div>
+              <div className="item-title-wrap">
+                <div className="item-title">{item.title}</div>
+              </div>
             </a>
           </div>
         ))}

@@ -7,11 +7,15 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
   - [x] Create Nav and Blog Archive page
   - [x] Pull data from current Wordpress
   - [x] Pull homepage content from Wordpress
-  - [ ] Pull social icon URL's from Wordpress Options Page
-  - [ ] Style and fill with actual content
-- [ ] Add projects page
+  - [ ] Fix Blog Date format and stylings
+  - [ ] Responsive
+- [x] Add projects page
 - [ ] Use a CI Tool (Github, Travis...)
-- [ ] Use either GitHub Pages or Heroku to host site
+
+### Nice to haves 👍
+- [ ] Get mentioned in Gatsby Showcase
+- [ ] Get a Lighthouse score of 90+
+- [ ] Add pagination to blog
 
 ## Build 🔧
 - To run dev server: ```gatsby develop```

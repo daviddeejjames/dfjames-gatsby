@@ -1,0 +1,29 @@
+// General Page layout
+.page-wrap{
+  margin-top: $header-height + 40px;
+
+  .page-title{
+    animation: slideUp 0.8s 0.2s;
+    animation-fill-mode: both;
+    margin-bottom: 40px;
+
+    $square: 15px;
+    &:before,
+    &:after{
+      transform: rotate(45deg);
+      display: inline-block;
+      content: '';
+      width: $square;
+      height: $square;
+      background-color: $primary-accent;
+      position: relative;
+      top: -4px;
+      left: -25px;
+    }
+
+    &:after{
+      left: initial;
+      right: -25px;
+    }
+  }
+}

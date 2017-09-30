@@ -18,12 +18,26 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography.js`,
       }
     },
-  ],
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+    // },
+    {
+      // Does both SASS and Autoprefixing
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [
+          require('autoprefixer')
+        ],
+        precision: 8 // SASS default: 5
+      }
+    }
+  ]
 }

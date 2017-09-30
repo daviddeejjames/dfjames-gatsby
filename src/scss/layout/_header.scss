@@ -1,0 +1,113 @@
+//
+// Header styling
+//
+.Header{
+  @include media_query($tablet-breakpoint){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  animation: headerSlideDown 0.7s 0.4s;
+  animation-fill-mode: both;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top: 4px solid #{$primary-accent};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-bg-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  .logo-link{
+    display: flex;
+    justify-content: center;
+
+    .diamond{
+      transition: transform 0.4s;
+      width: 24px;
+      height: 24px;
+      background-color: $primary-accent;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+
+    .name{
+      transition: transform 0.4s, opacity 0.4s;
+      transform: translateX(-30px);
+      opacity: 0;
+      margin-left: 18px;
+      margin-bottom: 0;
+      font-size: ems(14px);
+      line-height: 14px;
+      margin-top: 7px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    &:hover{
+
+      .diamond{
+        transform: rotate(135deg);
+      }
+
+      .name{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+
+  .Navigation{
+    display: inline-block;
+    user-select: none;
+
+    .nav-list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li{
+        display: inline-block;
+        margin: 0;
+        margin-right: 30px;
+
+        a{
+          transition: color 0.4s;
+          display: inline-block;
+          line-height: 13px;
+          font-size: ems(13px);
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $white;
+          letter-spacing: 1px;
+
+          &:hover{
+            color: $primary-accent !important;
+          }
+
+          &.active{
+            color: $primary-accent;
+          }
+        }
+
+        &:first-of-type .active{
+          color: $white;
+        }
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+
+    }
+
+  }
+}

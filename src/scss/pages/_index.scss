@@ -13,14 +13,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $off-white;
+    position: relative;
 
     // Profile image diamond
     .image-wrap{
       animation: portraitSlideLeft 0.8s 0.2s;
       animation-fill-mode: both;
-      margin-right: 40px;
       padding: 20px;
+      margin-right: 40px;
+      position: relative;
+      left: 15px;
 
       .mask{
         transform : rotate(45deg);
@@ -43,6 +45,8 @@
       animation: bioSlideRight 0.8s 0.2s;
       animation-fill-mode: both;
       max-width: 440px;
+      position: relative;
+      // top: 10px;
 
       // David James
       h2{
@@ -57,6 +61,14 @@
 
       p:last-of-type{
         margin-bottom: 0;
+      }
+    }
+
+    .Socials{
+      margin-top: 15px;
+
+      .social-icons{
+        @extend %social-icons;
       }
     }
   }

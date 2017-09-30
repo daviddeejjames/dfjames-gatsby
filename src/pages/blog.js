@@ -2,12 +2,12 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Blog = ({ data }) => (
-  <div>
-    <h1>Blog</h1>
+  <div className="blog page-wrap">
+    <h1 className="page-title">Blog</h1>
     <div className="blog-post-list">
       {data.allWordpressPost.edges.map(({ node }) => (
-        <div className="post">
-          <Link key={node.id} to={`blog/${node.slug}`}>
+        <div key={node.id} className="post">
+          <Link to={`blog/${node.slug}`}>
             <h3 className="post-title">{node.title}</h3>
             <div className="date">{node.date}</div>
           </Link>

@@ -9,9 +9,13 @@
 @import 'base/placeholders';
 @import 'base/general';
 
-// Template Sass Files
-@import 'templates/post-and-page';
+// General Layout Components
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/page';
 
-// Pages
+// Specific Page Styles
 @import 'pages/index';
 @import 'pages/projects';
+@import 'pages/blog';
+

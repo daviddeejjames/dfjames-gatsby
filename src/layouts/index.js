@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import Socials from './socials'
+
 import '../scss/styles.scss'
 
 const ListLink = props => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <Link activeClassName="active" to={props.to}>{props.children}</Link>
   </li>
 )
 
@@ -31,33 +33,45 @@ const Header = () => (
   </div>
 )
 
-const Footer = () => (
+
+
+const Footer = ({isOnHomepage}) => (
   <div className="Footer">
-
+    {console.log(isOnHomepage)}
+    <Socials />
   </div>
 )
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="David James - Front End Developer"
-      meta={[
-        {
-          name: 'description',
-          content: 'David James - Front End Web Developer - Melbourne',
-        },
-        {
-          name: 'keywords',
-          content:
-          'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
-        },
-      ]}
-    />
-    <Header />
-    <div className="content-container">{children()}</div>
-    <Footer />
-  </div>
-)
+const TemplateWrapper = ({ children }) => {
+  const isOnHomepage = window.location.pathname === '/'
+  var footer = ''
+
+  if(!isOnHomepage){
+    footer = <Footer />
+  }
+
+  return(
+    <div className="">
+      <Helmet
+        title="David James - Front End Developer"
+        meta={[
+          {
+            name: 'description',
+            content: 'David James - Front End Web Developer - Melbourne',
+          },
+          {
+            name: 'keywords',
+            content:
+            'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
+          },
+        ]}
+      />
+      <Header />
+      <div className="content-container">{children()}</div>
+      {footer}
+    </div>
+  )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

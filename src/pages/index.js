@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Socials from '../layouts/socials'
 //
 // Home page of portfolio site
 //
@@ -17,7 +18,10 @@ const IndexPage = ({ data }) => {
             <div className="profile-image" style={{ backgroundImage: `url(${profileImage.url})` }}> </div>
           </div>
         </div>
-        <div className="content" dangerouslySetInnerHTML={{ __html: homepage.content }} />
+        <div className="content">
+          <div className="inner" dangerouslySetInnerHTML={{ __html: homepage.content }} />
+          <Socials />
+        </div>
       </div>
     </div>
   )

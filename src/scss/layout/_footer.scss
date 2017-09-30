@@ -1,0 +1,13 @@
+.Footer{
+  width: 100%;
+  text-align: center;
+
+  .Socials{
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    .social-icons{
+      @extend %social-icons;
+    }
+  }
+}
