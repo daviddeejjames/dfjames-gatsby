@@ -11,12 +11,38 @@
       animation: slideUp 0.8s 0.2s;
       animation-fill-mode: both;
       margin-bottom: 30px;
-      padding: 30px 40px;
+      padding: 30px 80px;
+      position: relative;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      flex-direction:  column;
+
 
       .excerpt{
 
         p:last-of-type{
           margin-bottom: 0;
+        }
+      }
+
+      .date-wrap{
+        color: $primary-accent;
+        font-size: ems(14px);
+        position: absolute;
+        transform: rotate(90deg);
+        top: 75px;
+        right: -60px;
+        width: 200px;
+
+        svg{
+          width: 18px;
+          height: 18px;
+        }
+
+        .date{
+          display: inline-block;
+          margin-left: 10px;
         }
       }
     }

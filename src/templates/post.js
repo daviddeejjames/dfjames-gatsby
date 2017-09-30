@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import ClockIcon from "react-icons/lib/fa/clock-o"
 
 const PostTemplate = ({ data }) => {
-
   const post = data.wordpressPost
 
   return (
@@ -11,6 +11,10 @@ const PostTemplate = ({ data }) => {
         <h1 className="post-title">{post.title}</h1>
         <div className="divider"></div>
         <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div className="date-wrap">
+          <ClockIcon />
+          <div className="date">{post.date}</div>
+        </div>
       </div>
     </div>
   )

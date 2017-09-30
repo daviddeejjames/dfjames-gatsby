@@ -15,6 +15,20 @@
       text-align: center;
     }
 
+    .date-wrap{
+      color: $primary-accent;
+      font-size: ems(14px);
+
+      svg{
+        width: 18px;
+        height: 18px;
+      }
+
+      .date{
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
   }
 
 }
