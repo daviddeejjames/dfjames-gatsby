@@ -1,0 +1,20 @@
+.single-post{
+
+  .post-card{
+    @extend %card;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+
+
+    h1{
+      @include media_query($mobile-breakpoint){
+        animation: none;
+        font-size: ems(28px);
+      }
+      text-align: center;
+    }
+
+  }
+
+}
