@@ -4,6 +4,10 @@
 .projects-page{
   .page-content{
     @extend %card;
+    @include media_query($mobile-breakpoint){
+      animation: none;
+      margin-bottom: 30px;
+    }
     animation: slideUp 0.8s 0.5s;
     animation-fill-mode: both;
     margin-bottom: 40px;
@@ -14,6 +18,9 @@
   }
 
   .folio-items-wrap{
+    @include media_query($mobile-breakpoint){
+      animation: none;
+    }
     animation: slideUp 0.8s 0.8s;
     animation-fill-mode: both;
     display: flex;
@@ -21,6 +28,12 @@
     justify-content: space-between;
 
     .folio-item{
+      @include media_query($tablet-breakpoint){
+        flex-basis: 48%;
+      }
+      @include media_query($mobile-breakpoint){
+        flex-basis: 100%;
+      }
       border: 1px solid #{darken($card-border-color, 10)};
       border-radius: 5px;
       box-shadow: 0px 15px 30px -17px rgba(0,0,0,0.42);
@@ -36,6 +49,16 @@
       }
 
       .item-title-wrap{
+        @include media_query($tablet-breakpoint){
+          position: relative;
+          padding: 0;
+          background-color: $off-white;
+          padding: 20px 10px;
+          transition: none;
+          display: block;
+          position: relative;
+          opacity: 1;
+        }
         transition: opacity 0.4s;
         display: flex;
         justify-content: center;
@@ -45,13 +68,21 @@
         width: 100%;
         height: 100%;
         background-color: rgba($off-black, 0.85);
-        font-weight: 700;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
 
         .item-title{
+          @include media_query($tablet-breakpoint){
+            color: $bodycolor;
+            font-size: ems(16px);
+            line-height: 16px;
+          }
+          @include media_query($mobile-breakpoint){
+            font-size: ems(14px);
+            line-height: 14px;
+          }
           color: $primary-accent;
           font-size: ems(22px);
           line-height: 30px;

@@ -3,8 +3,13 @@
 //
 .Header{
   @include media_query($tablet-breakpoint){
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media_query($mobile-breakpoint){
+    padding-left: 20px;
+    padding-right: 20px;
+    animation: none;
   }
   animation: headerSlideDown 0.7s 0.4s;
   animation-fill-mode: both;
@@ -22,8 +27,12 @@
   top: 0;
   left: 0;
   z-index: 999;
+  will-change: transform;
 
   .logo-link{
+    @include media_query($mobile-breakpoint){
+      display: inline-block;
+    }
     display: flex;
     justify-content: center;
 
@@ -37,6 +46,9 @@
     }
 
     .name{
+      @include media_query($tablet-breakpoint){
+        display: none;
+      }
       transition: transform 0.4s, opacity 0.4s;
       transform: translateX(-30px);
       opacity: 0;

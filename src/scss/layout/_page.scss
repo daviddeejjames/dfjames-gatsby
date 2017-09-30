@@ -1,8 +1,22 @@
 // General Page layout
 .page-wrap{
+  @include media_query($tablet-breakpoint){
+     margin-top: $header-height + 30px;
+  }
+  @include media_query($mobile-breakpoint){
+    margin-top: $header-height + 28px;
+  }
   margin-top: $header-height + 40px;
 
   .page-title{
+    @include media_query($tablet-breakpoint){
+      margin-bottom: 30px;
+    }
+    @include media_query($mobile-breakpoint){
+      animation: none;
+      margin-bottom: 25px;
+      font-size: ems(35px);
+    }
     animation: slideUp 0.8s 0.2s;
     animation-fill-mode: both;
     margin-bottom: 40px;
@@ -10,6 +24,11 @@
     $square: 15px;
     &:before,
     &:after{
+      @include media_query($mobile-breakpoint){
+        transform: scale(0.8) rotate(45deg);
+        top: -3px;
+        left: -18px;
+      }
       transform: rotate(45deg);
       display: inline-block;
       content: '';
@@ -22,8 +41,11 @@
     }
 
     &:after{
+      @include media_query($mobile-breakpoint){
+        right: -16px;
+      }
       left: initial;
-      right: -25px;
+      right: -23px;
     }
   }
 }

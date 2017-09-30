@@ -41,7 +41,29 @@ body{
 
 // Main Content Wrap
 .content-container{
+  @include media_query($tablet-breakpoint){
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media_query($mobile-breakpoint){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
+
+  .divider{
+    width: 100px;
+    height: 14px;
+    border-top: 1px solid #{$primary-accent};
+    border-bottom: 1px solid #{$primary-accent};
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
 }

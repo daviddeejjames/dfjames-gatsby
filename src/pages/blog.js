@@ -11,6 +11,7 @@ const Blog = ({ data }) => (
             <h3 className="post-title">{node.title}</h3>
             <div className="date">{node.date}</div>
           </Link>
+          <div className="divider"></div>
           <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}

@@ -14,6 +14,12 @@
 }
 
 %card{
+  @include media_query($tablet-breakpoint){
+    padding: 30px;
+  }
+  @include media_query($mobile-breakpoint){
+    padding: 20px;
+  }
   border: 1px solid #{$card-border-color};
   padding: 40px;
   background-color: $off-white;

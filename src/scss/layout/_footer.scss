@@ -3,6 +3,10 @@
   text-align: center;
 
   .Socials{
+    @include media_query($mobile-breakpoint){
+      padding-top: 0px;
+      padding-bottom: 40px;
+    }
     padding-top: 20px;
     padding-bottom: 50px;
 

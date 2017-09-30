@@ -6,9 +6,12 @@ const PageTemplate = ({ data }) => {
   const page = data.wordpressPage
 
   return (
-    <div className="single-page">
-      <h1>{page.title}</h1>
-      <div className="page-content" dangerouslySetInnerHTML={{ __html: page.content }} />
+    <div className="single-page page-wrap">
+      <div className="page-card">
+        <h1>{page.title}</h1>
+        <div className="divider"></div>
+        <div className="page-content" dangerouslySetInnerHTML={{ __html: page.content }} />
+      </div>
     </div>
   )
 }

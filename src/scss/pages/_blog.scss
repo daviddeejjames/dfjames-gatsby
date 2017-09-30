@@ -3,6 +3,10 @@
   .blog-post-list{
 
     .post{
+      @include media_query($mobile-breakpoint){
+        padding: 20px;
+        animation: none;
+      }
       @extend %card;
       animation: slideUp 0.8s 0.2s;
       animation-fill-mode: both;

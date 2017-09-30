@@ -6,9 +6,12 @@ const PostTemplate = ({ data }) => {
   const post = data.wordpressPost
 
   return (
-    <div className="single-post">
-      <h1>{post.title}</h1>
-      <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+    <div className="single-post page-wrap">
+      <div className="post-card">
+        <h1 className="post-title">{post.title}</h1>
+        <div className="divider"></div>
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+      </div>
     </div>
   )
 }
@@ -21,6 +24,7 @@ export const pageQuery = graphql`
       title
       content
       excerpt
+      date
     }
     site {
       id
