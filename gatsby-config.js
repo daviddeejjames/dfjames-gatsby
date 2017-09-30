@@ -18,6 +18,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -38,6 +39,6 @@ module.exports = {
         ],
         precision: 8 // SASS default: 5
       }
-    }
+    },
   ]
 }
