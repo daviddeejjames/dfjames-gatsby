@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import ClockIcon from "react-icons/lib/fa/clock-o"
 
-import moment from 'moment'
+import { format } from 'date-fns'
 
 const Blog = ({ data }) => (
   <div className="blog page-wrap">
@@ -14,11 +14,13 @@ const Blog = ({ data }) => (
             <h3 className="post-title">{node.title}</h3>
           </Link>
           <div className="divider"></div>
-          <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           <div className="date-wrap">
-            <ClockIcon />
-            <div className="date">{moment(new Date(node.date)).format("MMM DD, YYYY")}</div>
+            <Link to={`blog/${node.slug}`}>
+              <ClockIcon />
+              <div className="date">{format(new Date(node.date), ("MMM DD, YYYY"))}</div>
+            </Link>
           </div>
+          <div className="excerpt" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
     </div>

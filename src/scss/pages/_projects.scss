@@ -20,6 +20,10 @@
   .folio-items-wrap{
     @include media_query($mobile-breakpoint){
       animation: none;
+      padding: 0 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
     animation: slideUp 0.8s 0.8s;
     animation-fill-mode: both;

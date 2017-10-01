@@ -15,20 +15,49 @@
       text-align: center;
     }
 
-    .date-wrap{
-      color: $primary-accent;
-      font-size: ems(14px);
+    .divider{
+      @include media_query($mobile-breakpoint){
+        margin-top: 15px;
+      }
+      margin-top: 22px;
+      margin-bottom: 10px;
+    }
 
-      svg{
-        width: 18px;
-        height: 18px;
+    .date-wrap{
+     @extend %date-wrap;
+     margin-bottom: 10px;
+
+     .date{
+       position: relative;
+       top: 2px;
+     }
+    }
+
+    .back-to-blog{
+      display: inline-block;
+      position: relative;
+      padding-left: 15px;
+
+      // Arrow
+      &:before{
+        transition: border-color 0.4s;
+        display: inline-block;
+        content: '';
+        border: solid #{$primary-accent};
+        border-width: 0 3px 3px 0;
+        padding: 3px;
+        transform: rotate(135deg);
+        position: absolute;
+        left: 0;
+        top: 7px;
       }
 
-      .date{
-        display: inline-block;
-        margin-left: 10px;
+      &:hover{
+
+        &:before{
+          border-color: lighten($primary-accent,20);
+        }
       }
     }
   }
-
 }

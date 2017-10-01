@@ -1,0 +1,16 @@
+.four-oh-four-page{
+  .page-content{
+    @extend %card;
+    @include media_query($mobile-breakpoint){
+      animation: none;
+      margin-bottom: 30px;
+    }
+    animation: slideUp 0.8s 0.5s;
+    animation-fill-mode: both;
+    margin-bottom: 40px;
+
+    p:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}

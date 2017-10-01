@@ -11,13 +11,32 @@
       animation: slideUp 0.8s 0.2s;
       animation-fill-mode: both;
       margin-bottom: 30px;
-      padding: 30px 80px;
+      padding: 30px 45px;
       position: relative;
       min-height: 200px;
       display: flex;
       align-items: center;
       flex-direction:  column;
 
+      .post-title{
+        @include media_query($tablet-breakpoint){
+          transition: none;
+        }
+        transition: color 0.4s;
+
+        &:hover{
+          color: $primary-accent;
+        }
+      }
+
+      .divider{
+        @include media_query($mobile-breakpoint){
+          margin-top: 8px;
+          margin-bottom: 12px;
+        }
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
 
       .excerpt{
 
@@ -27,22 +46,29 @@
       }
 
       .date-wrap{
-        color: $primary-accent;
-        font-size: ems(14px);
+        @include media_query($tablet-breakpoint){
+          right: -114px;
+        }
+        @include media_query($mobile-breakpoint){
+          transform: none;
+          position: relative;
+          top: 0;
+          right: 0;
+          width: auto;
+          margin-bottom: 10px;
+        }
+        @extend %date-wrap;
         position: absolute;
         transform: rotate(90deg);
         top: 75px;
-        right: -60px;
+        right: -122px;
         width: 200px;
 
-        svg{
-          width: 18px;
-          height: 18px;
-        }
-
         .date{
-          display: inline-block;
-          margin-left: 10px;
+          @include media_query($mobile-breakpoint){
+            position: relative;
+            top: 2px;
+          }
         }
       }
     }

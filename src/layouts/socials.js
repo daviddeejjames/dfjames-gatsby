@@ -29,7 +29,7 @@ const Socials = props => {
           <a href={linkedin} target="_blank"><FaLinkedIn /></a>
         </li>
         <li>
-          <a href={mailto} target="_blank"><FaEnvelope /></a>
+          <a href={mailto}><FaEnvelope /></a>
         </li>
       </ul>
     </div>

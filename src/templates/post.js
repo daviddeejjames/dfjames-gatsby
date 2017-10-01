@@ -1,6 +1,8 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 import ClockIcon from "react-icons/lib/fa/clock-o"
+
+import { format } from 'date-fns'
 
 const PostTemplate = ({ data }) => {
   const post = data.wordpressPost
@@ -10,11 +12,12 @@ const PostTemplate = ({ data }) => {
       <div className="post-card">
         <h1 className="post-title">{post.title}</h1>
         <div className="divider"></div>
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
         <div className="date-wrap">
           <ClockIcon />
-          <div className="date">{post.date}</div>
+          <div className="date">{format(new Date(post.date), ("MMM DD, YYYY"))}</div>
         </div>
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Link to="/blog" className="back-to-blog">Back to Blog</Link>
       </div>
     </div>
   )
