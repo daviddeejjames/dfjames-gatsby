@@ -51,7 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+        trackingId: 'UA-91072742-1',
+      },
     },
     {
       // Does both SASS and Autoprefixing
