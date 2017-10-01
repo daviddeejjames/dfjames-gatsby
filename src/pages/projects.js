@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Footer from '../layouts/footer'
 
 const Projects = ({ data }) => {
   const projectsPage = data.wordpressPage
@@ -22,6 +23,7 @@ const Projects = ({ data }) => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   )
 }

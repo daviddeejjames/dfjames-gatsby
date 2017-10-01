@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import ClockIcon from "react-icons/lib/fa/clock-o"
+import Footer from '../layouts/footer'
 
 import { format } from 'date-fns'
 
@@ -24,6 +25,7 @@ const Blog = ({ data }) => (
         </div>
       ))}
     </div>
+    <Footer />
   </div>
 )
 

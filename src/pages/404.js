@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../layouts/footer'
 
 const NotFoundPage = () => (
   <div className="four-oh-four-page page-wrap">
@@ -6,6 +7,7 @@ const NotFoundPage = () => (
     <div className="page-content">
       <p>You just hit a route that doesn&#39;t exist... the sadness :</p>
     </div>
+    <Footer />
   </div>
 )
 

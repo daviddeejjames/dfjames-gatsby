@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../layouts/footer'
 
 const PageTemplate = ({ data }) => {
 
@@ -11,6 +12,7 @@ const PageTemplate = ({ data }) => {
         <div className="divider"></div>
         <div className="page-content" dangerouslySetInnerHTML={{ __html: page.content }} />
       </div>
+      <Footer />
     </div>
   )
 }

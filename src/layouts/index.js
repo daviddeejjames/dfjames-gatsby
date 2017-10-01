@@ -33,25 +33,7 @@ const Header = () => (
   </div>
 )
 
-
-
-const Footer = () => (
-  <div className="Footer">
-    <Socials />
-  </div>
-)
-
 const TemplateWrapper = ({ children }) => {
-  const isOnHomepage = false;
-  let footer = ''
-
-  if (window) {
-    isOnHomepage = window.location.pathname === '/'
-  }
-
-  if (!isOnHomepage) {
-    footer = <Footer />
-  }
 
   return (
     <div className="">
@@ -71,7 +53,6 @@ const TemplateWrapper = ({ children }) => {
       />
       <Header />
       <div className="content-container">{children()}</div>
-      {footer}
     </div>
   )
 }
