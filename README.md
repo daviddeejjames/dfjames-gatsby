@@ -10,9 +10,8 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
   - [x] Fix Blog Date format and stylings
   - [x] Responsive
 - [x] Add projects page
-- [ ] Fix issue with location.pathname
+- [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
-- [ ]
 - [ ] Use a CI Tool (Github, Travis...)
 
 ### Nice to haves 👍
@@ -32,6 +31,6 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 
 ## Thanks To
 - [LevelUp Tutorials](https://www.leveluptutorials.com)
-
+- [Talinoob](https://github.com/nm-t) for putting up with me
 
 [1]: https://www.gatsbyjs.org
