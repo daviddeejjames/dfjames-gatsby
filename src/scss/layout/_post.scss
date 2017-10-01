@@ -1,4 +1,14 @@
 .single-post{
+  @include media_query($tablet-breakpoint){
+     margin-top: $header-height + 50px;
+  }
+  @include media_query($mobile-breakpoint){
+    margin-top: $header-height + 48px;
+  }
+  @include media_query($small-mobile-breakpoint){
+    margin-top: $header-height;
+  }
+  margin-top: $header-height + 60px;
 
   .post-card{
     @extend %card;

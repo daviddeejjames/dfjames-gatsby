@@ -35,22 +35,25 @@ const Header = () => (
 
 
 
-const Footer = ({isOnHomepage}) => (
+const Footer = () => (
   <div className="Footer">
-    {console.log(isOnHomepage)}
     <Socials />
   </div>
 )
 
 const TemplateWrapper = ({ children }) => {
-  const isOnHomepage = window.location.pathname === '/'
-  var footer = ''
+  const isOnHomepage = false;
+  let footer = ''
 
-  if(!isOnHomepage){
+  if (window) {
+    isOnHomepage = window.location.pathname === '/'
+  }
+
+  if (!isOnHomepage) {
     footer = <Footer />
   }
 
-  return(
+  return (
     <div className="">
       <Helmet
         title="David James - Front End Developer"

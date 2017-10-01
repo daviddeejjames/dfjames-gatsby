@@ -24,21 +24,17 @@ module.exports = {
         name: "David James - Front End Developer",
         short_name: "David James",
         start_url: "/",
-        background_color: "#f7f0eb",
-        theme_color: "#a2466c",
+        background_color: "#111111",
+        theme_color: "#111111",
         display: "minimal-ui",
         icons: [
           {
-            // Everything in /static will be copied to an equivalent
-            // directory in /public during development and build, so
-            // assuming your favicons are in /static/favicons,
-            // you can reference them here
-            src: `/favicons/android-chrome-192x192.png`,
+            src: `/favicons/android-icon-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `/favicons/android-chrome-512x512.png`,
+            src: `/favicons/android-icon-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,
           },
@@ -52,11 +48,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+    },
     {
       // Does both SASS and Autoprefixing
       resolve: `gatsby-plugin-postcss-sass`,
