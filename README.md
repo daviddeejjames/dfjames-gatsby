@@ -12,13 +12,15 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 - [x] Add projects page
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
-- [ ] Use a CI Tool (Github, Travis...)
+- [ ] Deploy to Netlify
+- [ ] Add build status
+- [ ] Add a webhook to deploy 
 
 ### Nice to haves 👍
-- [ ] Get mentioned in Gatsby Showcase
-- [ ] Get a Lighthouse score of 90+
+- [x] Get mentioned in Gatsby Showcase :smile:
+- [x] Get a Lighthouse score of 90+ :100:
 - [ ] Add pagination to blog
-- [ ] Use Styled Components
+- [ ] Use Styled Components instead of SASS or in conjuction with
 
 ## Build 🔧
 - To run dev server: ```gatsby develop```
