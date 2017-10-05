@@ -64,5 +64,6 @@ module.exports = {
         precision: 8 // SASS default: 5
       }
     },
+    `gatsby-plugin-netlify`,
   ]
 }
