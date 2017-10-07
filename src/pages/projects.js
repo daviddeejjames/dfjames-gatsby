@@ -4,8 +4,7 @@ import Footer from '../layouts/footer'
 
 const Projects = ({ data }) => {
   const projectsPage = data.wordpressPage
-  const acfData = JSON.parse(data.wordpressPage.childWordpressAcfField.internal.content)
-  const folioItems = acfData.folio_items
+  const folioItems = projectsPage.acf.folio_items
 
   return (
     <div className="projects-page page-wrap">
@@ -34,12 +33,14 @@ export default Projects
 export const projectsPageQuery = graphql`
 query projectsPageQuery {
   wordpressPage(slug: {eq: "projects"}) {
+
     id
     title
     content
-    childWordpressAcfField {
-      internal {
-        content
+    acf{
+      folio_items{
+        title
+        url
       }
     }
   }
