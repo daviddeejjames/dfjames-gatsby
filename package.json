@@ -5,9 +5,9 @@
   "author": "David James <davidj28827@gmail.com>",
   "dependencies": {
     "autoprefixer": "^7.1.5",
-    "date-fns": "^1.28.5",
-    "gatsby": "^1.9.53",
-    "gatsby-link": "^1.6.20",
+    "date-fns": "^1.29.0",
+    "gatsby": "^1.9.61",
+    "gatsby-link": "^1.6.21",
     "gatsby-plugin-google-analytics": "^1.0.8",
     "gatsby-plugin-manifest": "^1.0.8",
     "gatsby-plugin-netlify": "^1.0.6",
@@ -16,7 +16,7 @@
     "gatsby-plugin-react-helmet": "^1.0.6",
     "gatsby-plugin-sass": "^1.0.12",
     "gatsby-plugin-typography": "^1.7.10",
-    "gatsby-source-wordpress": "^2.0.12",
+    "gatsby-source-wordpress": "^2.0.0",
     "react-icons": "^2.2.7",
     "typography-theme-fairy-gates": "^0.15.11"
   },
