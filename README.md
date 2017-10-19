@@ -12,9 +12,9 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 - [x] Add projects page
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
-- [ ] Deploy to Netlify
+- [ ] Deploy to Netlify - add deploy to Netlify button
 - [ ] Add build status
-- [ ] Add a webhook to deploy 
+- [ ] Add eslint and stylelint
 
 ### Nice to haves 👍
 - [x] Get mentioned in Gatsby Showcase :smile:
@@ -22,11 +22,11 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 - [ ] Add pagination to blog
 - [ ] Use Styled Components instead of SASS or in conjuction with
 
-## Build 🔧
+## Develop 🔧
 - To run dev server: ```gatsby develop```
   - Hot reloading dev environment available from ```localhost:8000```
 
-## Deploy :zap:
+## Build & Deploy :zap:
 - Build with:  ```gatsby build```
 - Add favicons to public folder
 - Deploy public folder to webserver of choice 🆒
