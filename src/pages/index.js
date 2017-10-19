@@ -7,15 +7,14 @@ import Socials from '../layouts/socials'
 //
 const IndexPage = ({ data }) => {
   const homepage = data.wordpressPage
-  const acfData = JSON.parse(data.wordpressPage.childWordpressAcfField.internal.content)
-  const profileImage = acfData.profile_image
+  const profileImage = data.wordpressPage.acf.profile_image.url
 
   return (
     <div className="front-page">
       <div className="card-wrap">
         <div className="image-wrap">
           <div className="mask">
-            <div className="profile-image" style={{ backgroundImage: `url(${profileImage.url})` }}> </div>
+            <div className="profile-image" style={{ backgroundImage: `url(${profileImage})` }}> </div>
           </div>
         </div>
         <div className="content">
@@ -36,9 +35,9 @@ query homePageQuery {
     id
     title
     content
-    childWordpressAcfField {
-      internal {
-        content
+    acf {
+      profile_image{
+        url
       }
     }
   }
