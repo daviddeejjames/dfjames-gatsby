@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
         {folioItems.map(item => (
           <div key={item.item_title} className="folio-item">
             <a href={item.item_url} target="_blank">
-              <div className="item-image" style={{ backgroundImage: `url(${item.item_image.url})` }}> </div>
+              <div className="item-image" style={{ backgroundImage: `url(${item.item_image.source_url})` }}> </div>
               <div className="item-title-wrap">
                 <div className="item-title">{item.item_title}</div>
               </div>
@@ -40,7 +40,7 @@ query projectsPageQuery {
       portfolio_items{
         item_title
         item_image{
-          url
+          source_url
         }
         item_url
       }

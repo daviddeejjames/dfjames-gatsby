@@ -7,7 +7,7 @@ import Socials from '../layouts/socials'
 //
 const IndexPage = ({ data }) => {
   const homepage = data.wordpressPage
-  const profileImage = data.wordpressPage.acf.profile_image.url
+  const profileImage = data.wordpressPage.acf.profile_image.source_url
 
   return (
     <div className="front-page">
@@ -37,7 +37,7 @@ query homePageQuery {
     content
     acf {
       profile_image{
-        url
+        source_url
       }
     }
   }
