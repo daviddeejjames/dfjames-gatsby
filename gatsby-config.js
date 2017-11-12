@@ -54,16 +54,7 @@ module.exports = {
         trackingId: 'UA-91072742-1',
       },
     },
-    {
-      // Does both SASS and Autoprefixing
-      resolve: `gatsby-plugin-postcss-sass`,
-      options: {
-        postCssPlugins: [
-          require('autoprefixer')
-        ],
-        precision: 8 // SASS default: 5
-      }
-    },
+    `gatsby-plugin-sass`
     `gatsby-plugin-netlify`,
   ]
 }
