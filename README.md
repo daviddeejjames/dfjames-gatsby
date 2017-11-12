@@ -5,9 +5,8 @@ Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpres
 ## TODO
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
-- [ ] Deploy to Netlify - add deploy to Netlify button
-- [ ] Add build status
 - [ ] Add eslint and stylelint
+- [ ] Add Travis CI and build status
 
 ### Nice to haves 👍
 - [x] Get mentioned in Gatsby Showcase :smile:
