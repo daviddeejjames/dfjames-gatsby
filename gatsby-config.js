@@ -54,7 +54,7 @@ module.exports = {
         trackingId: 'UA-91072742-1',
       },
     },
-    `gatsby-plugin-sass`
-    `gatsby-plugin-netlify`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`
   ]
 }

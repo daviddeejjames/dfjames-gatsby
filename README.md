@@ -1,15 +1,8 @@
 # Dfjames + Blog (using [Gatsby][1]) 👓
 
-Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme to learn some more React and add a blog to my site!
+Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpress REST API.
 
 ## TODO
-- [x] Build Homepage and Blog (MVP)
-  - [x] Create Nav and Blog Archive page
-  - [x] Pull data from current Wordpress
-  - [x] Pull homepage content from Wordpress
-  - [x] Fix Blog Date format and stylings
-  - [x] Responsive
-- [x] Add projects page
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
 - [ ] Deploy to Netlify - add deploy to Netlify button
@@ -34,5 +27,6 @@ Recreating my portfolio site to use [GatsbyJS][1] instead of my Wordpress theme 
 ## Thanks To
 - [LevelUp Tutorials](https://www.leveluptutorials.com)
 - [Talinoob](https://github.com/nm-t) for putting up with me
+- [Julian Chan](https://github.com/juz501) for finding that dependency bug: https://github.com/gatsbyjs/gatsby/issues/2328#issuecomment-334540380
 
-[1]: https://www.gatsbyjs.org
+[1]: https://github.com/gatsbyjs/gatsby
