@@ -1,4 +1,4 @@
-# Dfjames + Blog (using [Gatsby][1]) 👓
+# Dfjames + Blog (using [Gatsby][1] and WordPress) 👓
 
 Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpress REST API.
 
@@ -7,6 +7,7 @@ Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpres
 - [ ] Fix date format using GraphQL
 - [ ] Add eslint and stylelint
 - [ ] Add Travis CI and build status
+- [ ] Fix Favicons for all browsers
 
 ### Nice to haves 👍
 - [x] Get mentioned in Gatsby Showcase :smile:
@@ -26,6 +27,6 @@ Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpres
 ## Thanks To
 - [LevelUp Tutorials](https://www.leveluptutorials.com)
 - [Talinoob](https://github.com/nm-t) for putting up with me
-- [Julian Chan](https://github.com/juz501) for finding that dependency bug: https://github.com/gatsbyjs/gatsby/issues/2328#issuecomment-334540380
+- [Julian Chan](https://github.com/juz501) for finding that dependency bug: https://github.com/gatsbyjs/gatsby/issues/2328#issuecomment-343711735
 
 [1]: https://github.com/gatsbyjs/gatsby
