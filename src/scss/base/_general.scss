@@ -37,6 +37,11 @@ body{
       color: lighten($primary-accent,20);
     }
   }
+
+  blockquote {
+    border: none;
+    color: $bodycolor;
+  }
 }
 
 // Main Content Wrap

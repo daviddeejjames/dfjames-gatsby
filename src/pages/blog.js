@@ -33,7 +33,7 @@ export default Blog
 
 export const pageQuery = graphql`
   query getPostQuery {
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost(sort: { fields: [date], order: DESC }) {
       edges {
         node {
           id
