@@ -4,19 +4,18 @@
   "version": "1.0.0",
   "author": "David James <davidj28827@gmail.com>",
   "dependencies": {
-    "autoprefixer": "^7.1.6",
     "date-fns": "^1.29.0",
-    "gatsby": "^1.9.192",
-    "gatsby-link": "^1.6.36",
-    "gatsby-plugin-google-analytics": "^1.0.12",
-    "gatsby-plugin-manifest": "^1.0.8",
-    "gatsby-plugin-netlify": "^1.0.7",
-    "gatsby-plugin-offline": "^1.0.10",
-    "gatsby-plugin-postcss-sass": "^1.0.13",
+    "gatsby": "^1.9.222",
+    "gatsby-link": "^1.6.38",
+    "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-google-analytics": "^1.0.20",
+    "gatsby-plugin-manifest": "^1.0.15",
+    "gatsby-plugin-nprogress": "^1.0.13",
+    "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.13",
-    "gatsby-plugin-typography": "^1.7.10",
-    "gatsby-source-wordpress": "^2.0.54",
+    "gatsby-plugin-sass": "^1.0.18",
+    "gatsby-plugin-typography": "^1.7.17",
+    "gatsby-source-wordpress": "^2.0.62",
     "react-icons": "^2.2.7",
     "typography-theme-fairy-gates": "^0.15.11"
   },
@@ -31,8 +30,5 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.7.4"
   }
 }

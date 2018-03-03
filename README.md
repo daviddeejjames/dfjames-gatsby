@@ -1,13 +1,13 @@
 # Dfjames + Blog (using [Gatsby][1] and WordPress) 👓
 
-Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpress REST API.
+My portfolio site using [GatsbyJS][1] and connecting it to the Wordpress REST API.
 
 ## TODO
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
 - [ ] Add eslint and stylelint
 - [ ] Add Travis CI and build status
-- [ ] Fix Favicons for all browsers
+- [ ] Use gatsby-plugin for lazy-loading images
 
 ### Nice to haves 👍
 - [x] Get mentioned in Gatsby Showcase :smile:
@@ -26,7 +26,7 @@ Recreated my portfolio site using [GatsbyJS][1] and connected it to the Wordpres
 
 ## Thanks To
 - [LevelUp Tutorials](https://www.leveluptutorials.com)
-- [Talinoob](https://github.com/nm-t) for putting up with me
+- [Talinoob](https://github.com/nm-t) 😘
 - [Julian Chan](https://github.com/juz501) for finding that dependency bug: https://github.com/gatsbyjs/gatsby/issues/2328#issuecomment-343711735
 
 [1]: https://github.com/gatsbyjs/gatsby

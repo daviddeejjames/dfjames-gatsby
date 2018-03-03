@@ -51,9 +51,10 @@
       .profile-image{
         transform: rotate(-45deg);
         @extend %bg-image;
+        background-size: 81%;
         width: 290px;
         height: 260px;
-        transform-origin: 60px 170px; // Better centering of profile image
+        transform-origin: 43px 188px;; // Better centering of profile image
       }
     }
 
