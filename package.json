@@ -1,7 +1,7 @@
 {
   "name": "dfjames-gatsby",
   "description": "My portfolio site using GatsbyJS pulling data from Wordpress REST API",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "David James <davidj28827@gmail.com>",
   "dependencies": {
     "date-fns": "^1.29.0",
