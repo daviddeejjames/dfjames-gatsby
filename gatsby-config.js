@@ -1,3 +1,4 @@
+const autoprefixer = require('autoprefixer');
 module.exports = {
   siteMetadata: {
     title: `David James`,
@@ -58,10 +59,7 @@ module.exports = {
       // Does both SASS and Autoprefixing
       resolve: `gatsby-plugin-postcss-sass`,
       options: {
-        postCssPlugins: [
-          require('autoprefixer')
-        ],
-        precision: 8 // SASS default: 5
+        postCssPlugins: [autoprefixer({ browsers: ["> 1%", "last 2 versions"] })],
       }
     }
   ]
