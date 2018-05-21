@@ -11,12 +11,12 @@ const Blog = ({ data }) => (
     <div className="blog-post-list">
       {data.allWordpressPost.edges.map(({ node }) => (
         <div key={node.id} className="post">
-          <Link to={`blog/${node.slug}`}>
+          <Link to={`/blog/${node.slug}`}>
             <h3 className="post-title">{node.title}</h3>
           </Link>
           <div className="divider"></div>
           <div className="date-wrap">
-            <Link to={`blog/${node.slug}`}>
+            <Link to={`/blog/${node.slug}`}>
               <ClockIcon />
               <div className="date">{format(new Date(node.date), ("MMM DD, YYYY"))}</div>
             </Link>
@@ -33,7 +33,7 @@ export default Blog
 
 export const pageQuery = graphql`
   query getPostQuery {
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost(sort: { fields: [date], order: DESC }) {
       edges {
         node {
           id

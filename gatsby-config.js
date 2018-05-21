@@ -10,7 +10,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         baseUrl: 'dfjames.press',
-        protocol: 'http',
+        protocol: 'https',
         hostingWPCOM: false,
         useACF: true,
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
@@ -28,18 +28,6 @@ module.exports = {
         background_color: "#111111",
         theme_color: "#111111",
         display: "minimal-ui",
-        icons: [
-          {
-            src: `/favicons/android-icon-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/android-icon-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
       },
     },
     `gatsby-plugin-offline`,
@@ -50,14 +38,41 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/favicon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-91072742-1',
       },
     },
     {
-      // Does both SASS and Autoprefixing
-      resolve: `gatsby-plugin-postcss-sass`,
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: true,
+      },
+    },
+    {
+      // Does both SASS
+      resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [autoprefixer({ browsers: ["> 1%", "last 2 versions"] })],
       }
