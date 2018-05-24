@@ -1,12 +1,13 @@
-# Dfjames + Blog (using [Gatsby][1] and WordPress) 👓
+# Dfjames Portfolio Site (using [Gatsby][1] and WordPress) 👓
 
-My portfolio site using [GatsbyJS][1] and connecting it to the Wordpress REST API.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddeejjames/dfjames-gatsby)
+
+My portfolio site using [GatsbyJS][1] and connecting it to the Wordpress REST API. Now hosted on [Netlify](https://www.netlify.com)!
 
 ## TODO
 - [ ] Fix issue with location.pathname/footer component
 - [ ] Fix date format using GraphQL
 - [ ] Add eslint and stylelint
-- [ ] Add Travis CI and build status
 - [ ] Use gatsby-plugin for lazy-loading images
 
 ### Nice to haves 👍

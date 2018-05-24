@@ -56,9 +56,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: 'UA-91072742-1',
+        id: 'GTM-NDXSQ5N',
+        includeInDevelopment: false,
       },
     },
     {
@@ -72,7 +73,7 @@ module.exports = {
     },
     {
       // Does both SASS
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-postcss-sass`,
       options: {
         postCssPlugins: [autoprefixer({ browsers: ["> 1%", "last 2 versions"] })],
       }
