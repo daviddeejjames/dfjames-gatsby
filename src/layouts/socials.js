@@ -9,9 +9,9 @@ import FaEnvelope from 'react-icons/lib/fa/envelope'
 const Socials = props => {
   const github = 'https://github.com/daviddeejjames'
   const linkedin = 'https://au.linkedin.com/in/david-james-614521106'
-  const codepen = 'https://codepen.io/davidj288'
+  const codepen = 'https://codepen.io/daviddeejjames'
   const twitter = 'https://twitter.com/daviddeejjames'
-  const mailto = 'mailto:davidj28827@gmail.com'
+  const mailto = 'mailto:dave@dfjames.com'
 
   return (
     <div className="Socials">
