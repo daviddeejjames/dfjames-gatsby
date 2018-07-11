@@ -11,7 +11,7 @@ const Socials = props => {
   const linkedin = 'https://au.linkedin.com/in/david-james-614521106'
   const codepen = 'https://codepen.io/daviddeejjames'
   const twitter = 'https://twitter.com/daviddeejjames'
-  const mailto = 'mailto:dave@dfjames.com'
+  const mailto = 'mailto:davidj28827@gmail.com'
 
   return (
     <div className="Socials">
