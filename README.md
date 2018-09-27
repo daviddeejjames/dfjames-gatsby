@@ -29,4 +29,5 @@ My portfolio site using [GatsbyJS][1] and connecting it to the Wordpress REST AP
 - [Julian Chan](https://github.com/juz501) for finding that dependency bug: https://github.com/gatsbyjs/gatsby/issues/2328#issuecomment-343711735
 
 Thanks to Gatsby for the free swag for contributing 👍🏻
+
 [1]: https://github.com/gatsbyjs/gatsby
