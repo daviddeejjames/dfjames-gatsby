@@ -15,7 +15,7 @@ module.exports = {
         acfOptionPageIds: [],
         auth: {
         },
-        verboseOutput: true,
+        verboseOutput: false,
         perPage: 100,
         concurrentRequests: 10,
         excludedRoutes: ['/*/*/comments', '/yoast/**'],

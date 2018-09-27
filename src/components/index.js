@@ -24,14 +24,8 @@ const Navigation = () => (
 )
 
 const Header = () => {
-  let homeClassName = '';
-
-  if(location.pathname === '/') {
-    homeClassName = 'homepage';
-  }
-
   return(
-    <div className={`Header ${homeClassName}`}>
+    <div className="Header">
       <Link className="logo-link" to="/">
         <div className="diamond" />
         <div className="name">David James</div>
@@ -43,7 +37,7 @@ const Header = () => {
 
 const TemplateWrapper = ({ children }) => {
   return (
-    <div className="">
+    <div className={children.props.className}>
       <Helmet
         title="David James - Front End Developer"
         meta={[

@@ -28,7 +28,7 @@
   z-index: 999;
   will-change: transform;
 
-  &.homepage {
+  .front-page & {
     animation: headerSlideDown 0.7s 0.4s;
     animation-fill-mode: both;
   }
