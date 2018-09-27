@@ -1,46 +1,47 @@
 const autoprefixer = require('autoprefixer');
 module.exports = {
   siteMetadata: {
-    title: `David James`,
-    subtitle: `Front End Developer`
+    title: 'David James',
+    subtitle: 'Front End Developer'
   },
   plugins: [
     {
-      // Pull wordpress content from API
       resolve: 'gatsby-source-wordpress',
       options: {
         baseUrl: 'dfjames.press',
         protocol: 'https',
         hostingWPCOM: false,
         useACF: true,
-        // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
-        // It can help you debug specific API Endpoints problems
-        verboseOutput: false,
+        acfOptionPageIds: [],
+        auth: {
+        },
+        verboseOutput: true,
+        perPage: 100,
+        concurrentRequests: 10,
+        excludedRoutes: ['/*/*/comments', '/yoast/**'],
+        normalizer: function ({ entities }) {
+          return entities;
+        },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "David James - Front End Developer",
-        short_name: "David James",
-        start_url: "/",
-        background_color: "#111111",
-        theme_color: "#111111",
-        display: "minimal-ui",
+        name: 'David James - Front End Developer',
+        short_name: 'David James',
+        start_url: '/',
+        background_color: '#111111',
+        theme_color: '#111111',
+        display: 'minimal-ui',
       },
     },
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-favicon',
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      }
-    },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/images/favicon.png",
+        logo: './src/images/favicon.png',
         injectHTML: true,
         icons: {
           android: true,
@@ -56,28 +57,34 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'GTM-NDXSQ5N',
         includeInDevelopment: false,
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.
-        color: `tomato`,
+        color: 'tomato',
         // Disable the loading spinner.
         showSpinner: true,
       },
     },
     {
       // Does both SASS
-      resolve: `gatsby-plugin-postcss-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         postCssPlugins: [autoprefixer({ browsers: ["> 1%", "last 2 versions"] })],
       }
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
     }
   ]
-}
+};
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
-
-import Socials from './socials'
 
 import '../scss/styles.scss'
 
 const ListLink = props => (
   <li>
-    <Link activeClassName="active" to={props.to}>{props.children}</Link>
+    <Link activeClassName="active" to={props.to}>
+      {props.children}
+    </Link>
   </li>
 )
 
@@ -23,18 +23,25 @@ const Navigation = () => (
   </nav>
 )
 
-const Header = () => (
-  <div className="Header">
-    <Link className="logo-link" to="/">
-      <div className="diamond"></div>
-      <div className="name">David James</div>
-    </Link>
-    <Navigation />
-  </div>
-)
+const Header = () => {
+  let homeClassName = '';
+
+  if(location.pathname === '/') {
+    homeClassName = 'homepage';
+  }
+
+  return(
+    <div className={`Header ${homeClassName}`}>
+      <Link className="logo-link" to="/">
+        <div className="diamond" />
+        <div className="name">David James</div>
+      </Link>
+      <Navigation />
+    </div>
+  );
+}
 
 const TemplateWrapper = ({ children }) => {
-
   return (
     <div className="">
       <Helmet
@@ -47,12 +54,12 @@ const TemplateWrapper = ({ children }) => {
           {
             name: 'keywords',
             content:
-            'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
+              'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
           },
         ]}
       />
       <Header />
-      <div className="content-container">{children()}</div>
+      <div className="content-container">{children}</div>
     </div>
   )
 }

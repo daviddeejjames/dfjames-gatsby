@@ -3,4 +3,6 @@ import fairyGateTheme from 'typography-theme-fairy-gates'
 
 const typography = new Typography(fairyGateTheme)
 
-module.exports = typography
+export default typography
+export const rhythm = typography.rhythm
+export const scale = typography.scale

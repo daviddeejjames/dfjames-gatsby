@@ -1,19 +1,26 @@
 import React from 'react'
-import Footer from '../layouts/footer'
+import { graphql } from 'gatsby'
+
+import TemplateWrapper from '../components/index.js'
+import Footer from '../components/footer'
 
 const PageTemplate = ({ data }) => {
-
   const page = data.wordpressPage
 
   return (
-    <div className="single-page page-wrap">
-      <div className="page-card">
-        <h1>{page.title}</h1>
-        <div className="divider"></div>
-        <div className="page-content" dangerouslySetInnerHTML={{ __html: page.content }} />
+    <TemplateWrapper>
+      <div className="single-page page-wrap">
+        <div className="page-card">
+          <h1>{page.title}</h1>
+          <div className="divider" />
+          <div
+            className="page-content"
+            dangerouslySetInnerHTML={{ __html: page.content }}
+          />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </TemplateWrapper>
   )
 }
 
@@ -34,4 +41,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
