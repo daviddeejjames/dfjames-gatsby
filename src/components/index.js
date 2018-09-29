@@ -36,8 +36,9 @@ const Header = () => {
 }
 
 const TemplateWrapper = ({ children }) => {
+
   return (
-    <div className={children.props.className}>
+    <div className={children.props.className == 'front-page' ? 'homepage' : null}>
       <Helmet
         title="David James - Front End Developer"
         meta={[

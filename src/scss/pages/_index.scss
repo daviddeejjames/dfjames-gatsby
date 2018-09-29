@@ -4,7 +4,7 @@
 .front-page{
   @include media_query($mobile-breakpoint){
     height: auto;
-    margin-top: 110px;
+    margin-top: 60px;
     margin-bottom: 40px;
   }
   display: flex;
@@ -51,6 +51,7 @@
       .profile-image{
         transform: rotate(-45deg);
         @extend %bg-image;
+        background-color: $primary-accent;
         background-size: 113%;
         width: 290px;
         height: 260px;
