@@ -22,6 +22,7 @@
         @include media_query($tablet-breakpoint){
           transition: none;
         }
+        margin: 0;
         transition: color 0.4s;
 
         &:hover{

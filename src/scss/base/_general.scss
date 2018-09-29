@@ -17,23 +17,28 @@ body{
   h4,
   h5,
   h6,
-  strong{
+  strong {
+    margin-top: 0;
     font-style: normal;
     color: $heading-color;
   }
 
   // Responsive Images
-  img{
+  img {
       max-width: 100%;
       height: auto;
     }
 
-  a{
+  a {
+    text-decoration: none;
+    text-shadow: none;
+    background: none;
     transition: color 0.4s;
     color: $primary-accent;
     -webkit-tap-highlight-color: transparent;
 
     &:hover{
+      text-decoration: none;
       color: lighten($primary-accent,20);
     }
   }
