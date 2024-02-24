@@ -40,16 +40,16 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div className={children.props.className == 'front-page' ? 'homepage' : null}>
       <Helmet
-        title="David James - Front End Developer"
+        title="David James - Software Developer"
         meta={[
           {
             name: 'description',
-            content: 'David James - Front End Web Developer - Melbourne',
+            content: 'David James - Software Developer - Melbourne',
           },
           {
             name: 'keywords',
             content:
-              'David James, Melebounre, Front End Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
+              'David James, Melebounre, Front End Developer, Software Developer, Full Stack Developer, gatsbyjs, gatsby, blog, frontend, reactjs, react, css, scss, sass',
           },
         ]}
       />
